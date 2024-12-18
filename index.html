@@ -28,15 +28,15 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="#Growing Instructions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Growing Instructions</a>
+    <a href="#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Growing Instructions</a>
     <a href="#Recipes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Recipes</a>
     <a href="#Contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">FAQs</a>
-        <a href="#" class="w3-bar-item w3-button">How your grow kit is made</a>
-        <a href="#" class="w3-bar-item w3-button">Mushroom Facts</a>
+        <a href="#FAQs" class="w3-bar-item w3-button">FAQs</a>
+        <a href="#Story" class="w3-bar-item w3-button">How your grow kit is made</a>
+        <a href="#Mushroom-Facts" class="w3-bar-item w3-button">Mushroom Facts</a>
       </div>
     </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -45,16 +45,16 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#Growing Instructions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Growing Instructions</a>
+  <a href="#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Growing Instructions</a>
   <a href="#Recipes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Recipes</a>
   <a href="#Contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQs</a>
+  <a href="#FAQs" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQs</a>
 </div>
 
 <!-- Page content -->
 
 <!-- Transparent Banner -->
-<div class="banner">
+<div class="banner" id="#">
   <img src="SporePlay_banner3.png" alt="Banner Image">
 </div>
 
@@ -83,16 +83,84 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <!-- The instructions Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Growing-Instructions">
     <h2 class="w3-wide">Growing Instructions</h2>
     <p class="w3-opacity"><i>Follow these simple steps</i></p>
     <p class="w3-justify">When your grow kit arrives it is ready to fruit mushrooms. It can be kept in a cool,
          dark place for up to 1 month before you begin growing. See the FAQs section for more tips and tricks.</p>
 
          <img src="grow_instructions_schematic.jpg" style="width:100%">
+    </div>
+  </div>
 
-    <div class="w3-row w3-padding-32">
+    <!-- The Recipes Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Recipes">
+      <h2 class="w3-wide">Recipes</h2>
+      <p class="w3-opacity"><i>Pink or king Oyster 'bacon'</i></p>
+      <p class="w3-justify">Plenty of fat and heat is key here. Go easy on the salt. Heat a good tablespoon of
+         butter or ghee in a pan on medium heat. Add torn apart mushrooms. When mushrooms soften, add a pinch 
+         of salt and half a teaspoon of smoked papkrika. Mushrooms are done when they are crispy and browned
+          but there is still some softness in the middle. Add these to anything and everything but I like them on
+           eggs, avo toast, or great thrown in last minute to vegetarian carbonara.</p>
+  
+           <img src="oyster-mushroom-bacon-SQUARE-500x375.jpg" style="width:70%">
+
+      <p class="w3-opacity"><i>Pink or king Oyster 'bacon'</i></p>
+      <p class="w3-justify">Plenty of fat and heat is key here. Go easy on the salt. Heat a good tablespoon of
+        butter or ghee in a pan on medium heat. Add torn apart mushrooms. When mushrooms soften, add a pinch 
+        of salt and half a teaspoon of smoked papkrika. Mushrooms are done when they are crispy and browned
+          but there is still some softness in the middle. Add these to anything and everything but I like them on
+          eggs, avo toast, or great thrown in last minute to vegetarian carbonara.</p>
+  
+          <img src="kingoysterpan.webp" style="width:70%">
+      </div>
+    </div>
+
+      <!-- The FAQ Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="FAQs">
+    <h2 class="w3-wide">FAQs</h2>
+    <p class="w3-opacity"><i>Follow these simple steps</i></p>
+    <p class="w3-justify">When your grow kit arrives it is ready to fruit mushrooms. It can be kept in a cool,
+         dark place for up to 1 month before you begin growing. See the FAQs section for more tips and tricks.</p>
+
+         <!-- <img src="grow_instructions_schematic.jpg" style="width:100%"> -->
+    </div>
+  </div>
+
+      <!-- The how its made Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Story">
+    <h2 class="w3-wide">How your kit is made</h2>
+    <p class="w3-opacity"><i>What's the story?</i></p>
+    <p class="w3-justify">When your grow kit arrives it is ready to fruit mushrooms. It can be kept in a cool,
+         dark place for up to 1 month before you begin growing. See the FAQs section for more tips and tricks.</p>
+
+         <img src="mycielium_image.jpg" style="width:70%">
+
+         <p class="w3-justify">When your grow kit arrives it is ready to fruit mushrooms. It can be kept in a cool,
+          dark place for up to 1 month before you begin growing. See the FAQs section for more tips and tricks.</p>
+
+         <img src="lc_image.jpg" style="width:70%">
+
+         <p class="w3-justify">When your grow kit arrives it is ready to fruit mushrooms. It can be kept in a cool,
+          dark place for up to 1 month before you begin growing. See the FAQs section for more tips and tricks.</p>
+
+    </div>
+  </div>
+
+    <!-- The mushroom facts Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Mushroom-Facts">
+      <h2 class="w3-wide">Mushroom facts</h2>
+      <p class="w3-opacity"><i>Follow these simple steps</i></p>
+      <p class="w3-justify">When your grow kit arrives it is ready to fruit mushrooms. It can be kept in a cool,
+           dark place for up to 1 month before you begin growing. See the FAQs section for more tips and tricks.</p>
+  
+           <img src="grainjar_image.jpg" style="width:70%">
+      </div>
+    </div>
+
+    
+    <!-- <div class="w3-row w3-padding-32">
       <div class="w3-third">
         <p>Pink Oyster</p>
         <img src="PXL_20241027_091303396.MP.jpg" class="w3-round w3-margin-bottom" alt="Pink Oyster" style="width:60%">
@@ -104,9 +172,9 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-third">
         <p>King Oyster</p>
         <img src="fresh-raw-king-oyster-mushrooms.webp" class="w3-round" alt="King Oyster" style="width:60%">
-      </div>
-    </div>
-  </div>
+      </div> -->
+    <!-- </div>
+  </div> -->
 
   <!-- The Tour Section
   <div class="w3-black" id="tour">
@@ -173,7 +241,7 @@ body {font-family: "Lato", sans-serif}
   </div> -->
 
   <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="Contact">
     <h2 class="w3-wide w3-center">Contact</h2>
     <p class="w3-opacity w3-center"><i>Feedback, questions? Drop a note!</i></p>
     <div class="w3-row w3-padding-32">

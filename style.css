@@ -878,7 +878,7 @@ a {
 .w3-top,.w3-bottom {
     position: fixed;
     width: 100%;
-    z-index: 1100
+    z-index: 5500
 }
 
 .w3-top {
@@ -1821,6 +1821,7 @@ a {
   padding: 10px 10px 0 48px;
   display: block;
   cursor: pointer;
+  z-index: 5000;
 }
 
 .panel-content {
@@ -1829,26 +1830,28 @@ a {
   margin: 0 40px;
   height: 0;
   overflow: hidden;
-  z-index: -1;
+  /* z-index: -1; */
   position: relative;
   opacity: 0;
   -webkit-transition: .4s ease;
   -moz-transition: .4s ease;
   -o-transition: .4s ease;
   transition: .4s ease;
+  z-index: 5000;
 }
 
 .panel:checked ~ .panel-content{
   height: auto;
   opacity: 1;
   padding: 14px;
+  z-index: 5000;
 }
 
 .plus {
   position: absolute;
   margin-left: 20px;
   margin-top: 4px;
-  z-index: 1500;
+  z-index: 5000;
   font-size: 42px;
   line-height: 100%;
   -webkit-user-select: none;    

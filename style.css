@@ -373,7 +373,8 @@ a {
 }
 
 .w3-tooltip,.w3-display-container {
-    position: relative
+    position: relative;
+    margin-top: 5px
 }
 
 .w3-tooltip .w3-text {
@@ -436,7 +437,7 @@ a {
     min-width: 160px;
     margin: 0;
     padding: 0;
-    z-index: 1
+    z-index: 10
 }
 
 .w3-check,.w3-radio {
@@ -476,7 +477,7 @@ a {
 .w3-modal {
     z-index: 3;
     display: none;
-    padding-top: 100px;
+    /* padding-top: 10px; */
     position: fixed;
     left: 0;
     top: 0;
@@ -503,11 +504,11 @@ a {
 }
 
 .banner {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 9; /*Ensure it's above other content*/
   }
   
   .banner img {
@@ -877,11 +878,12 @@ a {
 .w3-top,.w3-bottom {
     position: fixed;
     width: 100%;
-    z-index: 1
+    z-index: 1100
 }
 
 .w3-top {
-    top: 0
+    top: 0;
+    /* z-index: 1100 */
 }
 
 .w3-bottom {
@@ -898,7 +900,7 @@ a {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    z-index: 2
+    /* z-index: 1200 */
 }
 
 .w3-display-topleft {
@@ -1032,7 +1034,7 @@ a {
 }
 
 .w3-codespan {
-    color: crimson;
+    color: #d52b96;
     background-color: #f1f1f1;
     padding-left: 4px;
     padding-right: 4px;

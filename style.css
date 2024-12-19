@@ -527,7 +527,7 @@ a {
 
 @media (max-width: 480px) { /* Target very small screens (like phones) */
     .banner {
-        padding-top: 2px; /* Minimal padding for very small screens */
+        padding-top: 1.5px; /* Minimal padding for very small screens */
     }
 }
 

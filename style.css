@@ -15,7 +15,8 @@ html {
 
 body {
     margin: 0;
-    background-color: #d8d2d2
+    background-color: #d8d2d2;
+    padding-top: 10px;
 }
 
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
@@ -509,7 +510,7 @@ a {
     left: 0;
     width: 100%; /* Full width */
     z-index: 9; /*Ensure it's above other content*/
-    padding-top: 10px;
+    padding-top: 30px;
   }
   
   .banner img {

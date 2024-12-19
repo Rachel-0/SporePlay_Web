@@ -510,7 +510,7 @@ a {
     left: 0;
     width: 100%; /* Full width */
     z-index: 9; /*Ensure it's above other content*/
-    padding-top: 70px;
+    padding-top: 20px;
   }
   
   .banner img {
@@ -518,6 +518,18 @@ a {
     /* opacity: 0.8; Makes the banner semi-transparent */
     display: block; /* Removes any extra space around the image */
   }
+
+  @media (max-width: 768px) { /* Target small screens (like tablets and phones) */
+    .banner {
+        padding-top: 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) { /* Target very small screens (like phones) */
+    .banner {
+        padding-top: 2px; /* Minimal padding for very small screens */
+    }
+}
 
 .w3-center .w3-bar {
     display: inline-block;

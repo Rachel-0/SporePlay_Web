@@ -510,7 +510,7 @@ a {
     left: 0;
     width: 100%; /* Full width */
     z-index: 9; /*Ensure it's above other content*/
-    padding-top: 30px;
+    padding-top: 50px;
   }
   
   .banner img {

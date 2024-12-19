@@ -509,6 +509,7 @@ a {
     left: 0;
     width: 100%; /* Full width */
     z-index: 9; /*Ensure it's above other content*/
+    margin-top: 10px;
   }
   
   .banner img {

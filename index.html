@@ -16,13 +16,15 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
 </head>
-<body>
+<body id="Home">
+
 
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#Home" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#Shop" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Shop</a>
     <a href="#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Growing Instructions</a>
     <a href="#Recipes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Recipes</a>
     <a href="#Story" class="w3-bar-item w3-button w3-padding-large w3-hide-small">What's the story?</a>
@@ -40,6 +42,7 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#Shop" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Shop</a>
   <a href="#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Growing Instructions</a>
   <a href="#Recipes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Recipes</a>
   <a href="#Story" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Story</a>

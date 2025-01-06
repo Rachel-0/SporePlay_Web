@@ -315,6 +315,7 @@ a {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
+    position: relative; /* Ensure it's positioned so z-index works */
     z-index: 9;
     background-color: #ee7467;
     color: white; /* White text */

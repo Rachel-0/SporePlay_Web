@@ -305,7 +305,7 @@ a {
     padding-left: 16px
 }
 
-.w3-btn,.w3-button {
+.w3-btn,.w3-button-body {
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -321,6 +321,23 @@ a {
     border-radius: 5px; /* Rounded corners */
     font-size: 1rem; /* Standard button font size */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth effects */
+}
+
+.w3-btn,.w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 8;
+    background-color: inherit;
+    color: inherit /* White text */
+    /* font-size: 1rem; Standard button font size */
+    /* transition: background-color 0.3s ease, transform 0.2s ease; Add smooth effects */
 }
 
 .w3-btn:hover {

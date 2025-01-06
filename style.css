@@ -1836,7 +1836,7 @@ a {
   padding: 10px 10px 0 48px;
   display: block;
   cursor: pointer;
-  z-index: 5000;
+  z-index: 7;
 }
 
 .panel-content {
@@ -1852,21 +1852,21 @@ a {
   -moz-transition: .4s ease;
   -o-transition: .4s ease;
   transition: .4s ease;
-  z-index: 5000;
+  z-index: 7;
 }
 
 .panel:checked ~ .panel-content{
   height: auto;
   opacity: 1;
   padding: 14px;
-  z-index: 5000;
+  z-index: 7;
 }
 
 .plus {
   position: absolute;
   margin-left: 20px;
   margin-top: 4px;
-  z-index: 5000;
+  z-index: 7;
   font-size: 42px;
   line-height: 100%;
   -webkit-user-select: none;    

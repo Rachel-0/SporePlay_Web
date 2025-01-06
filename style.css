@@ -308,7 +308,7 @@ a {
 .w3-btn,.w3-button-body {
     border: none;
     display: inline-block;
-    padding: 8px 16px;
+    padding: 12px 24px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
@@ -324,6 +324,20 @@ a {
     transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth effects */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
 }
+
+/* Hover Effect */
+#home a.w3-button-body:hover {
+    background-color: #45a049; /* Darker green background */
+    transform: translateY(-3px); /* Slight upward lift */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  }
+  
+  /* Click (Active) Effect */
+  #home a.w3-button-body:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: translateY(2px); /* Slight downward press effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Compressed shadow */
+  }
 
 .w3-btn,.w3-button {
     border: none;

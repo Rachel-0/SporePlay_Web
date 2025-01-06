@@ -315,12 +315,13 @@ a {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    z-index: 8;
+    z-index: 9;
     background-color: #ee7467;
     color: white; /* White text */
     border-radius: 5px; /* Rounded corners */
     font-size: 1rem; /* Standard button font size */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
 }
 
 .w3-btn,.w3-button {

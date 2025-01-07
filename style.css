@@ -1936,3 +1936,33 @@ a {
 html {
     scroll-behavior: smooth;
   }
+
+  /* Layout for the shop section */
+.shop-section {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange items horizontally */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between the carousel and shop header */
+    padding: 20px; /* Add padding around the section */
+  }
+  
+  /* Carousel Container */
+  .carousel-container {
+    flex: 1; /* Allow the carousel to take up available space */
+    max-width: 50%; /* Limit the width of the carousel */
+    position: relative; /* Ensure proper positioning for slides */
+    overflow: hidden; /* Hide any overflow from the slides */
+  }
+  
+  /* Shop Header */
+  .shop-header {
+    flex: 1; /* Allow the header to take up available space */
+    max-width: 50%; /* Limit the width of the header */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Adjust the carousel images */
+  .carousel-container img {
+    width: 100%; /* Ensure images fit the container */
+    height: auto; /* Maintain aspect ratio */
+  }

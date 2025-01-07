@@ -327,7 +327,7 @@ a {
 }
 
 /* Hover Effect */
-#home a.w3-button-body:hover {
+.w3-button-body:hover {
     background-color: #45a049; /* Darker green background */
     transform: translateY(-3px); /* Slight upward lift */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
@@ -336,7 +336,7 @@ a {
   }
   
   /* Click (Active) Effect */
-  #home a.w3-button-body:active {
+  .w3-button-body:active {
     background-color: #3e8e41; /* Even darker green when clicked */
     transform: translateY(2px); /* Slight downward press effect */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Compressed shadow */

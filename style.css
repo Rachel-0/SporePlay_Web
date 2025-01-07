@@ -354,7 +354,7 @@ a {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    z-index: 8;
+    z-index: 10;
     background-color: inherit;
     color: inherit /* White text */
     /* font-size: 1rem; Standard button font size */
@@ -480,7 +480,7 @@ a {
     min-width: 160px;
     margin: 0;
     padding: 0;
-    z-index: 5
+    z-index: 10
 }
 
 .w3-check,.w3-radio {
@@ -935,7 +935,7 @@ a {
 .w3-top,.w3-bottom {
     position: fixed;
     width: 100%;
-    z-index: 6
+    z-index: 10
 }
 
 .w3-top {

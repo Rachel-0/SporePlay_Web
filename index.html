@@ -1,351 +1,692 @@
-<!-- todo -->
-<!-- add link to etsy shop -->
-<!-- make search button work or remove -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head><link rel="icon" href="faviconSP_02.png" type="image/png">
-<title>Spore Play Mushrooms</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <link rel="icon" href="faviconSP_02.png" type="image/png" />
+    <title>Spore Play Mushrooms</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Spore Play Mushrooms" />
+    <meta
+      property="og:description"
+      content="Grow your own gourmet mushrooms. Grow kits handmade in north London."
+    />
+    <meta
+      property="og:image"
+      content="https://sporeplay.co.uk/SporePlay_banner_bottom.jpg"
+    />
+    <meta property="og:url" content="https://sporeplay.co.uk" />
 
-<!-- meta tags for website preview -->
-<!-- Required Open Graph tags 
-<meta property="og:title" content="Spore Play Mushrooms" />
-<meta property="og:description" content="Grow your own gourmet mushrooms.
- Grow kits handmade in north London." />
-<meta property="og:image" content="https://sporeplay.co.uk/SporePlay_banner_bottom.jpg" />
-<meta property="og:url" content="https://sporeplay.co.uk" />
-
-Optional Open Graph tags -->
-<!-- <meta property="og:type" content="website" />
-<meta property="og:locale" content="en_US" />
-
- Twitter-specific meta tags -->
-<!-- <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Spore Play Mushrooms" />
-<meta name="twitter:description" content="Grow your own gourmet mushrooms.
- Grow kits handmade in north London." />
-<meta name="twitter:image" content="https://sporeplay.co.uk/SporePlay_banner_bottom.jpg" --> -->
-
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-</head>
-<body>
-
-
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#Home" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="shop.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Shop</a>
-    <a href="#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Growing Instructions</a>
-    <a href="#Recipes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Recipes</a>
-    <a href="#Story" class="w3-bar-item w3-button w3-padding-large w3-hide-small">What's the story?</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#FAQs" class="w3-bar-item w3-button">FAQs</a>
-        <a href="#Mushroom-Facts" class="w3-bar-item w3-button">Mushroom Facts</a>
-        <a href="#Contact" class="w3-bar-item w3-button">Contact</a>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#Home" class="nav-logo">Spore Play Mushrooms</a>
+        <button
+          class="nav-toggle"
+          onclick="toggleNav()"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#Home" onclick="closeNav()">Home</a></li>
+          <li><a href="shop.html" onclick="closeNav()">Shop</a></li>
+          <li>
+            <a href="#Growing-Instructions" onclick="closeNav()">Growing</a>
+          </li>
+          <li><a href="#Recipes" onclick="closeNav()">Recipes</a></li>
+          <li><a href="#Story" onclick="closeNav()">Our Story</a></li>
+          <li><a href="#Fungi-Facts" onclick="closeNav()">Fungi Facts</a></li>
+          <li><a href="#FAQs" onclick="closeNav()">FAQs</a></li>
+          <li><a href="#Contact" onclick="closeNav()">Contact</a></li>
+        </ul>
       </div>
-    </div>
-    <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
-  </div>
-</div>
+    </nav>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="shop.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Shop</a>
-  <a href="#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Growing Instructions</a>
-  <a href="#Recipes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Recipes</a>
-  <a href="#Story" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Story</a>
-  <a href="#FAQs" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQs</a>
-  <a href="#Contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
-  
-</div>
-
-<!-- Page content -->
-
-<!-- Transparent Banner -->
-<div class="banner" id="#">
-  <img src="SporePlay_banner_top (3).png" alt="Banner Image">
-</div>
-
-<!-- HERO SECTION -->
-<div class="hero-section">
-  <!-- Full-width Carousel -->
-  <div class="carousel-container">
-    <div class="mySlides w3-display-container">
-      <img src="PXL_20250513_132616823.PORTRAIT~2.jpg" alt="Slide 1">
-    </div>
-    <div class="mySlides w3-display-container">
-      <img src="mature_golden_oyster.jpg" alt="Slide 2">
-    </div>
-    <div class="mySlides w3-display-container">
-      <img src="PXL_20241027_091454252.PORTRAIT (1) (1).jpg" alt="Slide 3">
-    </div>
-    <div class="mySlides w3-display-container">
-      <img src="young_golden_oyster.jpg" alt="Slide 4">
-    </div>
-    <div class="mySlides w3-display-container">
-      <img src="poyster_gills.jpg" alt="Slide 5">
-    </div>
-  </div>
-
-  <!-- Shop Header Overlaid -->
-  <div class="shop-header-overlay">
-    <h1>Welcome to Spore Play</h1>
-    <p>Grow your own gourmet mushrooms.</p>
-    <p><a href="shop.html" class="w3-button-body">Visit Shop</a></p>
-  </div>
-</div>
-
-  <!-- The instructions Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Growing-Instructions">
-    <h2 class="w3-wide">Growing Instructions</h2>
-    <p class="w3-opacity"><i>Follow these simple steps</i></p>
-    <p class="w3-justify">When your grow kit arrives it is ready to fruit mushrooms. It can be kept in a cool,
-         dark place for up to 1 month before you cut the bag and begin growing. See the FAQs section for more tips and tricks.</p>
-
-         <img src="grow_instructions_schematic.jpg" style="width:100%">
-    </div>
-  </div>
-
-    <!-- The Recipes Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Recipes">
-      <h2 class="w3-wide">Recipes</h2>
-      <p class="w3-opacity"><i>Pink Oyster 'bacon'</i></p>
-      <p class="w3-justify">Plenty of fat and heat is key here. Go easy on the salt. Heat a good tablespoon of
-         butter or ghee in a pan on medium heat. Add torn apart mushrooms. When mushrooms soften, add a pinch 
-         of salt and half a teaspoon of smoked papkrika. Mushrooms are done when they are crispy and browned
-          but there is still some softness in the middle. Add these to anything and everything but I like them on
-           eggs, avo toast, or great thrown in last minute to vegetarian carbonara.</p>
-  
-           <img src="oyster-mushroom-bacon-SQUARE-500x375.jpg" style="width:70%">
-
-      <p class="w3-opacity"><i>Pulled King Oyster</i></p>
-      <p class="w3-justify">A mushroom version of pulled pork. Take a fork and tear your king oyster stems
-         into rough strips. Fry your strips in oil in a large pan so that there is plenty of space for
-          the mushrooms without being crowded. Add your favourite BBQ sauce and half a teaspoon of smoked papkrika
-        or chipotle powder if you prefer a spicier version. Spread your mushrooms out onto some greaseproof paper
-      and oven bake until the sugars have caramelised and the edges are crisp. Load up a toasted buger bun
-       along with your favourite toppings</p>
-  
-          <img src="pulled-king-oyster-mushroom-11.jpg" style="width:70%">
+    <!-- ======= HERO ======= -->
+    <section class="hero" id="Home">
+      <div class="hero-slides">
+        <div
+          class="slide active"
+          style="
+            background-image: url(&quot;PXL_20250513_132616823.PORTRAIT~2.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;mature_golden_oyster.jpg&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;PXL_20241027_091454252.PORTRAIT (1) (1).jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;young_golden_oyster.jpg&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;poyster_gills.jpg&quot;)"
+        ></div>
       </div>
-    </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-logo-wrap">
+          <img
+            src="SporePlay_banner_top (3).png"
+            alt="Spore Play"
+            class="hero-logo"
+          />
+        </div>
+        <p class="hero-sub">
+          Gourmet grow kits and fresh mushrooms, handmade in north London
+        </p>
+        <a href="shop.html" class="btn-primary">Visit the Shop</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+    </section>
 
+    <!-- ======= INTRO STRIP ======= -->
+    <section class="intro-strip">
+      <div class="strip-item reveal-strip">
+        <i class="fa fa-leaf"></i>
+        <span>100% natural substrate</span>
+      </div>
+      <div class="strip-item reveal-strip" style="transition-delay: 0.1s">
+        <i class="fa fa-home"></i>
+        <span>Grown in my home lab</span>
+      </div>
+      <div class="strip-item reveal-strip" style="transition-delay: 0.2s">
+        <i class="fa fa-map-marker"></i>
+        <span>Made in Harringey</span>
+      </div>
+      <div class="strip-item reveal-strip" style="transition-delay: 0.3s">
+        <i class="fa fa-heart"></i>
+        <span>Small one-woman business</span>
+      </div>
+    </section>
 
-
-      <!-- The how its made Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Story">
-    <h2 class="w3-wide">What's the story?</h2>
-    <p class="w3-opacity"><i>How your kit is made</i></p>
-    <p class="w3-justify">Hi I'm Rachel! Spore Play is far from a huge farm. Your grow kit is made specially by me
-       in my home lab in north London. After experimenting with mushroom cultivation I realised that a lot of
-        people are interested in doing it too. Whether you love cooking, growing or generally experimenting. </p>
-
-         <img src="me_with_shelves.jpg" style="width:70%">
-
-         <p class="w3-justify">Your grow kit bag is essentially a substrate mix which has been fully collonised
-           with mushroom mycelium. The mycelium is the main body of the fungus and the mushroom is the fruit.
-          The mycelium at this stage is much less likely to suffer from contamination from competing bacteria
-        than the earlier stages. Your fungus has been happilly munching away on sterile popcorn and then a
-         mixture of wood/straw and soy bean hulls with a little gypsum for ph balance and nutrients.</p>
-
-         <img src="substrate_bags.jpg" style="width:70%">
-
-         <p class="w3-justify">When you cut into the plastic bag your fungus will be exposed to light and fresh
-          air as well as hopefully some mist if you are being kind to it. This will kick start the fruiting process
-          and mushrooms will start to 'pin'. Over a few days you will see these tiny pins develop into 
-          little mushrooms, and then bigger mushrooms!
-         </p>
-
-          <img src="PXL_20250527_114717434.jpg" style="width:70%">
-          
-          <p class="w3-justify">Don't forget to take some snaps of your beautiful mushrooms before
-            they go in the pan!
+    <!-- ======= GROWING INSTRUCTIONS ======= -->
+    <section class="section section-light" id="Growing-Instructions">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Growing Instructions</h2>
+          <p class="section-sub">Follow these simple steps</p>
+        </div>
+        <div class="grow-intro reveal-up" style="transition-delay: 0.1s">
+          <p>
+            When your grow kit arrives it is ready to fruit mushrooms. It can be
+            kept in a cool, dark place for up to 3 weeks before you begin
+            growing. See the FAQs section for more tips and tricks.
           </p>
-  
-    </div>
-  </div>
-
-    <!-- The mushroom facts Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Mushroom-Facts">
-      <h2 class="w3-wide">Mushroom facts</h2>
-      <p class="w3-opacity"><i>1. Mushrooms Can Break Down Plastic</i></p>
-      <p class="w3-justify">Some fungi, like Pestalotiopsis microspora, can digest plastic and are being
-         studied for their potential to combat pollution.</p>
-      
-         <p class="w3-opacity"><i>2. They Can Be Turned Into Packaging, insulation and Clothing</i></p>
-      <p class="w3-justify">Mycelium is used as a sustainable material for creating
-         eco-friendly packaging, leather-like fabrics and it is even being used
-          as an insulation material for housing.</p>
-      
-         <p class="w3-opacity"><i>3. There Are Over 14,000 Known Mushroom Species</i></p>
-      <p class="w3-justify">New species are being discovered every year, and many are still unidentified.</p>
-  
-      <p class="w3-opacity"><i>4. Fungi Have Inspired Medicine Beyond Penicillin</i></p>
-      <p class="w3-justify">The immunosuppressant drug cyclosporine, derived from fungi,
-         revolutionized organ transplants by preventing rejection.</p>
-  
-         <p class="w3-opacity"><i>5. Trees and Fungi have a symbiotic relationship</i></p>
-      <p class="w3-justify">Fungi benefit from the trees sugars from photosynthesis. Trees 
-        in turn benefit from nutrients like nitrogen and phosphorus from the fungi.
-         The fungus also acts to extend the trees root system and even communicate with other trees.</p>
-
-           <img src="grainjar_image (1).jpg" style="width:70%">
+        </div>
+        <div class="grow-steps">
+          <div class="grow-step reveal-up" style="transition-delay: 0s">
+            <div class="step-num">01</div>
+            <h3>Clean</h3>
+            <p>
+              Using the alcohol wipe provided, clean the front of the bag as
+              well as your knife/scissors.
+            </p>
+          </div>
+          <div class="grow-step reveal-up" style="transition-delay: 0.12s">
+            <div class="step-num">02</div>
+            <h3>Cut</h3>
+            <p>Score a cross in the bag to expose the mycelium to fresh air.</p>
+          </div>
+          <div class="grow-step reveal-up" style="transition-delay: 0.24s">
+            <div class="step-num">03</div>
+            <h3>Mist</h3>
+            <p>
+              Give 3 or 4 sprays to the front of the bag using the misting
+              bottle provided. To maintain humidity, do this twice daily and
+              continue once mushrooms appear.
+            </p>
+          </div>
+          <div class="grow-step reveal-up" style="transition-delay: 0.36s">
+            <div class="step-num">04</div>
+            <h3>Harvest</h3>
+            <p>
+              Watch tiny mushrooms (pins) develop over 7-15 days into full
+              mushrooms. Harvest and enjoy! For a second harvest, tape over the
+              cut bag and repeat the process on the other side of the bag.
+            </p>
+          </div>
+        </div>
+        <div class="grow-diagram reveal-up" style="transition-delay: 0.1s">
+          <img
+            src="grow_instructions_schematic.jpg"
+            alt="Growing instructions diagram"
+          />
+        </div>
       </div>
-    </div>
-    
-      <!-- The FAQ Section -->
-      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="FAQs">
-        <h2 class="w3-wide">Frequently Asked Questions</h2>
-        <p class="w3-opacity"><i>-</i></p>
-    
-        <div class="faq-content">
-          <div class="faq-question">
-            <input id="q1" type="checkbox" class="panel">
-            <div class="plus">+</div>
-            <label for="q1" class="panel-title">What is the best place to grow my mushrooms?</label>
-            <div class="panel-content">Your mushrooms need light, fresh air and humidity.
-              A kitchen, bathroom or living room is ideal. Avoid the window ledge if you can.
-               They don't need that much light and they could dry out if its sunny. 
-              Mushrooms excrete CO2 and need oxygen so avoid keeping them in a small
-               space such as a cupboard. Humidity needs will be covered by a couple of squirts of mist on
-               the cut bag twice a day.
+    </section>
+
+    <!-- ======= MUSHROOM VARIETIES ======= -->
+    <section class="section section-taupe">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>What We Grow</h2>
+          <p class="section-sub">Varieties available in our shop</p>
+        </div>
+        <div class="variety-grid">
+          <div class="variety-card reveal-up" style="transition-delay: 0s">
+            <div
+              class="variety-img"
+              style="background-image: url(&quot;poyster_gills.jpg&quot;)"
+            ></div>
+            <div class="variety-info">
+              <h3>Pink Oyster</h3>
+              <p>
+                Fast fruiting and vivid. Crisp up beautifully in a hot pan — our
+                most striking variety.
+              </p>
+              <a href="shop.html" class="btn-outline">Shop Now</a>
             </div>
           </div>
-          
-          <div class="faq-question">
-            <input id="q2" type="checkbox" class="panel">
-            <div class="plus">+</div>
-            <label for="q2" class="panel-title">How can I tell when to harvest?</label>
-            <div class="panel-content">Pink oyster mushrooms are best to harvest
-               before spores start to drop. This gives a better shelf life.
-              They are a little too mature when the edges curl upwards and the pink colour has faded. <br />
-              
-              For lion's mane, harvest when the spines are noticable but still firm. The spines will be around
-               3-4 cm long. The body should be firm and white.
-              When lion's mane is getting too mature it will yellow and become less firm to the touch. <br />
-
-              For king oyster, harvest when the stems are thick and the cap is fully formed
-               but still has a domed shape. Bigger mushrooms that have opened caps will be a bit more chewy. <br />
-
-               <b>General advice:</b> Handle the mushrooms gently to avoid bruising. Remove any bits of mushroom tissue 
-               left on the grow bag. To get a better 2nd flush of mushrooms, 
-               harvest them as soon as they are ready and avoid over-mature mushrooms which have started
-                dropping spores. This will give you a stronger harvest the 2nd time around.
+          <div class="variety-card reveal-up" style="transition-delay: 0.12s">
+            <div
+              class="variety-img"
+              style="
+                background-image: url(&quot;mature_golden_oyster.jpg&quot;);
+              "
+            ></div>
+            <div class="variety-info">
+              <h3>Golden Oyster</h3>
+              <p>
+                Delicate, nutty flavour with a golden hue. Stunning clusters
+                that grow in abundance.
+              </p>
+              <a href="shop.html" class="btn-outline">Shop Now</a>
             </div>
           </div>
-          
-          <div class="faq-question">
-            <input id="q3" type="checkbox" class="panel">
-            <div class="plus">+</div>
-            <label for="q3" class="panel-title">What can I do with the spent bag?</label>
-            <div class="panel-content">After a couple of good harvests you can break up your substrate
-              and use it as a nutritious compost.
+          <div class="variety-card reveal-up" style="transition-delay: 0.24s">
+            <div
+              class="variety-img"
+              style="
+                background-image: url(&quot;Lions-mane-mushroom-growing-on-a-tree.webp&quot;);
+              "
+            ></div>
+            <div class="variety-info">
+              <h3>Lion's Mane</h3>
+              <p>
+                Shaggy, otherworldly appearance. Meaty texture with a mild,
+                seafood-like taste.
+              </p>
+              <a href="shop.html" class="btn-outline">Shop Now</a>
+            </div>
+          </div>
+          <div class="variety-card reveal-up" style="transition-delay: 0.36s">
+            <div
+              class="variety-img"
+              style="
+                background-image: url(&quot;fresh-raw-king-oyster-mushrooms.webp&quot;);
+              "
+            ></div>
+            <div class="variety-info">
+              <h3>King Oyster</h3>
+              <p>
+                Thick, meaty stems that shred like pulled pork. The king of
+                kitchen mushrooms.
+              </p>
+              <a href="shop.html" class="btn-outline">Shop Now</a>
             </div>
           </div>
         </div>
-    
+      </div>
+    </section>
+
+    <!-- ======= RECIPES ======= -->
+    <section class="section section-dark" id="Recipes">
+      <div class="container">
+        <div class="section-header section-header-light reveal-up">
+          <h2>Recipes</h2>
+          <p class="section-sub">
+            Simple ideas to make the most of your harvest
+          </p>
+        </div>
+        <div class="recipe-grid">
+          <article class="recipe-card reveal-left">
+            <div class="recipe-img-wrap">
+              <img
+                src="oyster-mushroom-bacon-SQUARE-500x375.jpg"
+                alt="Pink oyster bacon"
+              />
+            </div>
+            <div class="recipe-body">
+              <span class="recipe-tag">Pink Oyster</span>
+              <h3>Oyster 'Bacon'</h3>
+              <p>
+                Plenty of fat and heat is key here. Go easy on the salt. Heat a
+                good tablespoon of butter or ghee in a pan on medium heat. Add
+                torn apart mushrooms. When mushrooms soften, add a pinch of salt
+                and half a teaspoon of smoked paprika. Mushrooms are done when
+                they are crispy and browned but there is still some softness in
+                the middle. Add these to anything and everything but I like them
+                on eggs, avo toast, or great thrown in last minute to vegetarian
+                carbonara.
+              </p>
+            </div>
+          </article>
+          <article class="recipe-card reveal-right">
+            <div class="recipe-img-wrap">
+              <img
+                src="pulled-king-oyster-mushroom-11.jpg"
+                alt="Pulled king oyster"
+              />
+            </div>
+            <div class="recipe-body">
+              <span class="recipe-tag">King Oyster</span>
+              <h3>Pulled King Oyster</h3>
+              <p>
+                A mushroom version of pulled pork. Take a fork and tear your
+                king oyster stems into rough strips. Fry your strips in oil in a
+                large pan so that there is plenty of space for the mushrooms
+                without being crowded. Add your favourite BBQ sauce and half a
+                teaspoon of smoked paprika or chipotle powder if you prefer a
+                spicier version. Spread your mushrooms out onto some greaseproof
+                paper and oven bake until the sugars have caramelised and the
+                edges are crisp. Load up a toasted burger bun along with your
+                favourite toppings.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
-    
-    <!-- <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p>Pink Oyster</p>
-        <img src="PXL_20241027_091303396.MP.jpg" class="w3-round w3-margin-bottom" alt="Pink Oyster" style="width:60%">
+    </section>
+
+    <!-- ======= OUR STORY ======= -->
+    <section class="section section-light" id="Story">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>What's the Story?</h2>
+          <p class="section-sub">How your kit is made</p>
+        </div>
+
+        <div class="story-block reveal-left">
+          <div class="story-text">
+            <p>
+              Hi I'm Rachel! Spore Play is far from a huge farm. Your grow kit
+              is made specially by me in my home lab in north London. After
+              experimenting with mushroom cultivation I realised that a lot of
+              people are interested in doing it too. Whether you love cooking,
+              growing or generally experimenting.
+            </p>
+          </div>
+          <div class="story-img-wrap">
+            <img src="me_with_shelves.jpg" alt="Rachel with mushroom shelves" />
+          </div>
+        </div>
+
+        <div class="story-block story-block-flip reveal-right">
+          <div class="story-img-wrap">
+            <img src="substrate_bags.jpg" alt="Substrate bags colonising" />
+          </div>
+          <div class="story-text">
+            <p>
+              Your grow kit bag is essentially a substrate mix which has been
+              fully colonised with mushroom mycelium. The mycelium is the main
+              body of the fungus and the mushroom is the fruit. The mycelium at
+              this stage is much less likely to suffer from contamination from
+              competing bacteria than the earlier stages. Your fungus has been
+              happily munching away on sterile popcorn and then a mixture of
+              wood/straw and soy bean hulls with a little gypsum for pH balance
+              and nutrients.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-block reveal-left">
+          <div class="story-text">
+            <p>
+              When you cut into the plastic bag your fungus will be exposed to
+              light and fresh air as well as hopefully some mist if you are
+              being kind to it. This will kick start the fruiting process and
+              mushrooms will start to 'pin'. Over a few days you will see these
+              tiny pins develop into little mushrooms, and then bigger
+              mushrooms!
+            </p>
+            <p class="story-sign">
+              Don't forget to take some snaps of your beautiful mushrooms before
+              they go in the pan!
+            </p>
+          </div>
+          <div class="story-img-wrap">
+            <img
+              src="PXL_20250527_114717434.jpg"
+              alt="Mushrooms growing on bag"
+            />
+          </div>
+        </div>
       </div>
-      <div class="w3-third">
-        <p>Lion's mane</p>
-        <img src="Lions-mane-mushroom-growing-on-a-tree.webp" class="w3-round w3-margin-bottom" alt="Lion's mane" style="width:60%">
+    </section>
+
+    <!-- ======= MUSHROOM FACTS ======= -->
+    <section class="section section-pink" id="Mushroom-Facts">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Mushroom Facts</h2>
+          <p class="section-sub">
+            The fungal kingdom is stranger than you think
+          </p>
+        </div>
+        <div class="facts-grid">
+          <div class="fact-card reveal-up" style="transition-delay: 0s">
+            <div class="fact-num">01</div>
+            <h3>Mushrooms Can Break Down Plastic</h3>
+            <p>
+              Some fungi, like <em>Pestalotiopsis microspora</em>, can digest
+              plastic and are being studied for their potential to combat
+              pollution.
+            </p>
+          </div>
+          <div class="fact-card reveal-up" style="transition-delay: 0.1s">
+            <div class="fact-num">02</div>
+            <h3>
+              They Can Be Turned Into Packaging, Insulation &amp; Clothing
+            </h3>
+            <p>
+              Mycelium is used as a sustainable material for creating
+              eco-friendly packaging, leather-like fabrics and it is even being
+              used as an insulation material for housing.
+            </p>
+          </div>
+          <div class="fact-card reveal-up" style="transition-delay: 0.2s">
+            <div class="fact-num">03</div>
+            <h3>There Are Over 14,000 Known Species</h3>
+            <p>
+              New species are being discovered every year, and many are still
+              unidentified.
+            </p>
+          </div>
+          <div class="fact-card reveal-up" style="transition-delay: 0.3s">
+            <div class="fact-num">04</div>
+            <h3>Fungi Have Inspired Medicine Beyond Penicillin</h3>
+            <p>
+              The immunosuppressant drug cyclosporine, derived from fungi,
+              revolutionized organ transplants by preventing rejection.
+            </p>
+          </div>
+          <div class="fact-card reveal-up" style="transition-delay: 0.4s">
+            <div class="fact-num">05</div>
+            <h3>Trees and Fungi Have a Symbiotic Relationship</h3>
+            <p>
+              Fungi benefit from the trees' sugars from photosynthesis. Trees in
+              turn benefit from nutrients like nitrogen and phosphorus from the
+              fungi. The fungus also acts to extend the trees' root system and
+              even communicate with other trees.
+            </p>
+          </div>
+          <div
+            class="fact-card fact-card-img reveal-up"
+            style="transition-delay: 0.5s"
+          >
+            <img src="grainjar_image (1).jpg" alt="Grain jar colonising" />
+          </div>
+        </div>
       </div>
-      <div class="w3-third">
-        <p>King Oyster</p>
-        <img src="fresh-raw-king-oyster-mushrooms.webp" class="w3-round" alt="King Oyster" style="width:60%">
-      </div> -->
-    <!-- </div>
-  </div> -->
+    </section>
 
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="Contact">
-    <h2 class="w3-wide w3-center">Contact</h2>
-    <p class="w3-opacity w3-center"><i>Feedback, questions? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Manor house, London, UK<br>
-        <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br> -->
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: info@sporeplay.co.uk<br>
+    <!-- ======= COLLABORATE ======= -->
+    <section class="section section-collab">
+      <div class="container">
+        <div class="collab-inner reveal-up">
+          <div class="collab-text">
+            <span class="collab-eyebrow">Let's work together</span>
+            <h2>
+              Artists, Chefs &amp; Food Makers — We'd Love to Hear From You
+            </h2>
+            <p>
+              Whether you're a local restaurant looking for a reliable supply of
+              fresh gourmet mushrooms, a food stall wanting something unusual on
+              the menu, or an artist excited by the aesthetics of mycelium —
+              Spore Play is open to collaboration.
+            </p>
+            <p>
+              We're passionate about connecting fungi with food, art, and
+              community in north London and beyond.
+            </p>
+            <a href="mailto:info@sporeplay.co.uk" class="btn-primary"
+              >Get in Touch</a
+            >
+          </div>
+          <div class="collab-deco" aria-hidden="true">
+            <div class="deco-ring deco-ring-1"></div>
+            <div class="deco-ring deco-ring-2"></div>
+            <div class="deco-ring deco-ring-3"></div>
+            <span class="deco-spore deco-spore-1">✦</span>
+            <span class="deco-spore deco-spore-2">✦</span>
+            <span class="deco-spore deco-spore-3">✦</span>
+          </div>
+        </div>
       </div>
+    </section>
 
+    <!-- ======= FAQs ======= -->
+    <section class="section section-light" id="FAQs">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-sub">-</p>
+        </div>
+        <div class="faq-list reveal-up" style="transition-delay: 0.15s">
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              onclick="toggleFaq(this)"
+              aria-expanded="false"
+            >
+              <span>What is the best place to grow my mushrooms?</span>
+              <i class="fa fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Your mushrooms need light, fresh air and humidity. A kitchen,
+                bathroom or living room is ideal. Avoid the window ledge if you
+                can. They don't need that much light and they could dry out if
+                it's sunny. Mushrooms excrete CO₂ and need oxygen so avoid
+                keeping them in a small space such as a cupboard. Humidity needs
+                will be covered by a couple of squirts of mist on the cut bag
+                twice a day.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              onclick="toggleFaq(this)"
+              aria-expanded="false"
+            >
+              <span>How can I tell when to harvest?</span>
+              <i class="fa fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Pink Oyster:</strong> Best to harvest before spores
+                start to drop. They are a little too mature when the edges curl
+                upwards and the pink colour has faded.
+              </p>
+              <p>
+                <strong>Lion's Mane:</strong> Harvest when the spines are
+                noticeable but still firm. The spines will be around 3–4 cm
+                long. The body should be firm and white. When lion's mane is
+                getting too mature it will yellow and become less firm to the
+                touch.
+              </p>
+              <p>
+                <strong>King Oyster:</strong> Harvest when the stems are thick
+                and the cap is fully formed but still has a domed shape. Bigger
+                mushrooms that have opened caps will be a bit more chewy.
+              </p>
+              <p>
+                <strong>General advice:</strong> Handle the mushrooms gently to
+                avoid bruising. Remove any bits of mushroom tissue left on the
+                grow bag. To get a better 2nd flush of mushrooms, harvest them
+                as soon as they are ready and avoid over-mature mushrooms which
+                have started dropping spores. This will give you a stronger
+                harvest the 2nd time around.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              onclick="toggleFaq(this)"
+              aria-expanded="false"
+            >
+              <span>What can I do with the spent bag?</span>
+              <i class="fa fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                After a couple of good harvests you can break up your substrate
+                and use it as a nutritious compost.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  
-<!-- End Page Content -->
-</div>
+    </section>
 
-<!-- Image of location/map -->
-<img src="SporePlay_banner_bottom(2).jpg" class="w3-image" style="width:100%" style="height:50px">
+    <!-- ======= CONTACT ======= -->
+    <section class="section section-taupe" id="Contact">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info reveal-left">
+            <div class="section-header text-left">
+              <h2>Contact</h2>
+              <p class="section-sub">Feedback, questions? Drop a note!</p>
+            </div>
+            <ul class="contact-details">
+              <li><i class="fa fa-map-marker"></i> Manor House, London, UK</li>
+              <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:info@sporeplay.co.uk">info@sporeplay.co.uk</a>
+              </li>
+              <li>
+                <i class="fa fa-instagram"></i>
+                <a
+                  href="https://www.instagram.com/sporeplaymushrooms/"
+                  target="_blank"
+                  >@sporeplaymushrooms</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="contact-shop-cta reveal-right">
+            <p>Ready to start growing?</p>
+            <a href="shop.html" class="btn-primary">Visit the Shop</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
-  <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
-  <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
-  <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> -->
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+      <img
+        src="SporePlay_banner_bottom(2).jpg"
+        alt=""
+        class="footer-banner"
+        aria-hidden="true"
+      />
+      <div class="footer-inner">
+        <p class="footer-brand">Spore Play Mushrooms</p>
+        <p class="footer-copy">
+          Handmade in north London &nbsp;·&nbsp;
+          <a href="mailto:info@sporeplay.co.uk">info@sporeplay.co.uk</a>
+        </p>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/sporeplaymushrooms/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
 
-  <script data-token="PP4n7fIFM3f2F2YNdF6KYTgGmOY7hc0QJ1RjI4ZpHXrshJH3emENuk43XZC8mrwq" src="https://embed360.io/widgets/js/embed360.js"></script>
-</footer>
+    <script>
+      // ---- Navbar scroll effect ----
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("navbar")
+          .classList.toggle("scrolled", window.scrollY > 60);
+        checkReveal();
+      });
 
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
+      // ---- Mobile nav ----
+      function toggleNav() {
+        document.getElementById("navLinks").classList.toggle("open");
+        document.querySelector(".nav-toggle").classList.toggle("active");
+      }
+      function closeNav() {
+        document.getElementById("navLinks").classList.remove("open");
+        document.querySelector(".nav-toggle").classList.remove("active");
+      }
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
+      // ---- Hero slideshow ----
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slide");
+      function nextSlide() {
+        slides[slideIndex].classList.remove("active");
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.add("active");
+        setTimeout(nextSlide, 4500);
+      }
+      setTimeout(nextSlide, 4500);
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+      // ---- Scroll reveal ----
+      const revealEls = document.querySelectorAll(
+        ".reveal-up, .reveal-left, .reveal-right, .reveal-strip",
+      );
 
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+      function checkReveal() {
+        const winH = window.innerHeight;
+        revealEls.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          if (top < winH * 0.88) {
+            el.classList.add("is-visible");
+          }
+        });
+      }
+      // Run once on load
+      checkReveal();
 
-</body>
+      // ---- FAQ accordion ----
+      function toggleFaq(btn) {
+        const item = btn.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+        document
+          .querySelectorAll(".faq-item")
+          .forEach((i) => i.classList.remove("open"));
+        document
+          .querySelectorAll(".faq-trigger")
+          .forEach((b) => b.setAttribute("aria-expanded", "false"));
+        if (!isOpen) {
+          item.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      }
+    </script>
+  </body>
 </html>

@@ -1,77 +1,215 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head><link rel="icon" href="faviconSP_02.png" type="image/png">
-<title>Shop</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-</head>
-<body>
+  <head>
+    <link rel="icon" href="faviconSP_02.png" type="image/png" />
+    <title>Spore Play Mushrooms</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Spore Play Mushrooms" />
+    <meta
+      property="og:description"
+      content="Grow your own gourmet mushrooms. Grow kits handmade in north London."
+    />
+    <meta
+      property="og:image"
+      content="https://sporeplay.co.uk/SporePlay_banner_bottom.jpg"
+    />
+    <meta property="og:url" content="https://sporeplay.co.uk" />
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html#Home" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="shop.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Shop</a>
-    <a href="index.html#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Growing Instructions</a>
-    <a href="index.html#Recipes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Recipes</a>
-    <a href="index.html#Story" class="w3-bar-item w3-button w3-padding-large w3-hide-small">What's the story?</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="index.html#FAQs" class="w3-bar-item w3-button">FAQs</a>
-        <a href="index.html#Mushroom-Facts" class="w3-bar-item w3-button">Mushroom Facts</a>
-        <a href="index.html#Contact" class="w3-bar-item w3-button">Contact</a>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#Home" class="nav-logo">Spore Play Mushrooms</a>
+        <button
+          class="nav-toggle"
+          onclick="toggleNav()"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#Home" onclick="closeNav()">Home</a></li>
+          <li><a href="shop.html" onclick="closeNav()">Shop</a></li>
+          <li>
+            <a href="#Growing-Instructions" onclick="closeNav()">Growing</a>
+          </li>
+          <li><a href="#Recipes" onclick="closeNav()">Recipes</a></li>
+          <li><a href="#Story" onclick="closeNav()">Our Story</a></li>
+          <li><a href="#Fungi-Facts" onclick="closeNav()">Fungi Facts</a></li>
+          <li><a href="#FAQs" onclick="closeNav()">FAQs</a></li>
+          <li><a href="#Contact" onclick="closeNav()">Contact</a></li>
+        </ul>
       </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
-</div>
+    </nav>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="shop.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Shop</a>
-    <a href="index.html#Growing-Instructions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Growing Instructions</a>
-  <a href="index.html#Recipes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Recipes</a>
-  <a href="index.html#Story" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Story</a>
-  <a href="index.html#FAQs" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQs</a>
-  <a href="index.html#Contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
-  
-</div>
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links)
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top: 46px"
+    >
+      <a
+        href="shop.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Shop</a
+      >
+      <a
+        href="index.html#Growing-Instructions"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Growing Instructions</a
+      >
+      <a
+        href="index.html#Recipes"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Recipes</a
+      >
+      <a
+        href="index.html#Story"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Story</a
+      >
+      <a
+        href="index.html#FAQs"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >FAQs</a
+      >
+      <a
+        href="index.html#Contact"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Contact</a
+      >
+    </div> -->
 
-<!-- Page content -->
+    <!-- Page content -->
 
-<!-- Transparent Banner -->
-<!-- <div class="banner" id="shopbanner">
+    <!-- Transparent Banner -->
+    <!-- <div class="banner" id="shopbanner">
   <img src="SporePlay.jpg" alt="Banner Image">
 </div> -->
+    <!-- ======= HERO ======= -->
+    <section class="hero" id="Home">
+      <div class="hero-slides">
+        <div
+          class="slide active"
+          style="
+            background-image: url(&quot;PXL_20250513_132616823.PORTRAIT~2.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;mature_golden_oyster.jpg&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;PXL_20241027_091454252.PORTRAIT (1) (1).jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;young_golden_oyster.jpg&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;poyster_gills.jpg&quot;)"
+        ></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-logo-wrap">
+          <!-- <img -->
+          <!-- src="SporePlay_banner_top (3).png" -->
+          <!-- alt="Spore Play"
+            class="hero-logo"
+          /> -->
+        </div>
+        <p class="hero-sub">
+          Gourmet grow kits and fresh mushrooms, handmade in north London
+        </p>
+      </div>
+    </section>
 
-<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
-    <h1 class="w3-center">Welcome to the shop</h1>
-    <p class="w3-center">Browse the collection. Which species will you grow next?</p>
-</div>
 
-<div class="w3-content" style="max-width:2000px;margin-top:26px w3-center; z-index:4">
+ <!-- ======= INTRO STRIP ======= -->
+  <section class="intro-strip">
+    <div class="strip-item reveal-strip">
+      <i class="fa fa-leaf"></i>
+      <span>100% natural substrate</span>
+    </div>
+    <div class="strip-item reveal-strip" style="transition-delay: 0.1s">
+      <i class="fa fa-home"></i>
+      <span>Quick and easy to grow</span>
+    </div>
+    <div class="strip-item reveal-strip" style="transition-delay: 0.2s">
+      <i class="fa fa-map-marker"></i>
+      <span>Handmade in Harringey, London</span>
+    </div>
+    <div class="strip-item reveal-strip" style="transition-delay: 0.3s">
+      <i class="fa fa-heart"></i>
+      <span>Small one-woman business</span>
+    </div>
+  </section>
 
-    <div id="listings"> </div>
+    <div
+      class="w3-container w3-content w3-center w3-padding-64"
+      style="max-width: 800px"
+    >
+      <h1 class="w3-center">Welcome to the shop</h1>
+      <p class="w3-center">
+        Browse the collection. Which species will you grow next?
+      </p>
+    </div>
 
-    <!-- End Page Content -->
-</div>
+    <div
+      class="w3-content"
+      style="max-width: 2000px; margin-top: 26px w3-center; z-index: 4"
+    ><section class="section section-taupe" id="listings">
+      <div id="listings"></div>
 
-<!-- Image of location/map -->
-<img src="SporePlay_banner_bottom(2).jpg" class="w3-image" style="width:100%" style="height:50px">
+      <!-- End Page Content -->
+      </div>
+    </section>
+    <!-- Image of location/map -->
+    <img
+      src="SporePlay_banner_bottom(2).jpg"
+      class="w3-image"
+      style="width: 100%"
+      style="height: 50px"
+    />
 
-<!-- Footer -->
-<footer>
-    <script data-token="PP4n7fIFM3f2F2YNdF6KYTgGmOY7hc0QJ1RjI4ZpHXrshJH3emENuk43XZC8mrwq" src="https://embed360.io/widgets/js/embed360.js"></script>
-</footer>
-
-</body>
+    <!-- Footer -->
+    <footer>
+      <script
+        data-token="PP4n7fIFM3f2F2YNdF6KYTgGmOY7hc0QJ1RjI4ZpHXrshJH3emENuk43XZC8mrwq"
+        src="https://embed360.io/widgets/js/embed360.js"
+      ></script>
+    </footer>
+  </body>
 </html>

@@ -291,7 +291,7 @@ h4 {
 .hero {
   position: relative;
   height: 72vh;
-  min-height: 480px;
+  min-height: 560px;
   max-height: 680px;
   overflow: hidden;
   display: flex;

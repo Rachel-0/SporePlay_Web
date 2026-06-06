@@ -756,7 +756,19 @@
         slides[slideIndex].classList.add("active");
         setTimeout(nextSlide, 4500);
       }
+
       setTimeout(nextSlide, 4500);
+
+      // ---- Navbar scroll effect ----
+      window.addEventListener(
+        "scroll",
+        () => {
+          document
+            .getElementById("navbar")
+            .classList.toggle("scrolled", window.scrollY > 60);
+        },
+        { passive: true },
+      );
 
       // ---- Scroll reveal ----
       const revealEls = document.querySelectorAll(
@@ -766,14 +778,14 @@
       function checkReveal() {
         const winH = window.innerHeight;
         revealEls.forEach((el) => {
-          const top = el.getBoundingClientRect().top;
-          if (top < winH * 0.88) {
+          if (el.getBoundingClientRect().top < winH * 0.88) {
             el.classList.add("is-visible");
           }
         });
       }
-      // Run once on load
-      checkReveal();
+
+      checkReveal(); // run once on load
+      window.addEventListener("scroll", checkReveal, { passive: true }); // run on every scroll
 
       // ---- FAQ accordion ----
       function toggleFaq(btn) {

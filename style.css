@@ -1176,6 +1176,13 @@ h4 {
   border-right: none;
 }
 
+.badge-val_col {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pink-mid);
+  line-height: 1;
+}
 .badge-val {
   font-family: var(--ff-display);
   font-size: 1.5rem;

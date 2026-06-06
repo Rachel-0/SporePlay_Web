@@ -993,3 +993,262 @@ h4 {
     grid-template-columns: 1fr;
   }
 }
+
+/* shop css from claude */
+
+/* ============================================
+   SHOP PAGE
+   ============================================ */
+
+/* Keep navbar always solid on shop page */
+.shop-page .navbar {
+  background: var(--black);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+}
+
+.nav-active {
+  color: var(--pink-light) !important;
+}
+
+/* ---- Shop Hero ---- */
+.shop-hero {
+  position: relative;
+  height: 72vh;
+  min-height: 480px;
+  max-height: 680px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: var(--nav-h);
+}
+
+/* Background image — positioned absolutely so parallax JS can move it */
+.shop-hero-bg {
+  position: absolute;
+  inset: -25% 0 -25% 0; /* oversized top/bottom for parallax travel room */
+  background-image: url("poyster_gills.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  will-change: transform;
+}
+
+/* Dark gradient overlay */
+.shop-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(26, 0, 10, 0.78) 0%,
+    rgba(26, 0, 10, 0.55) 55%,
+    rgba(26, 0, 10, 0.3) 100%
+  );
+}
+
+/* Pink diagonal colour slice — bottom-right decorative accent */
+.shop-hero-slice {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 60%,
+    rgba(212, 82, 122, 0.18) 60%
+  );
+  pointer-events: none;
+}
+
+/* Content */
+.shop-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 4rem;
+  max-width: 640px;
+}
+
+.shop-hero-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pink-light);
+  margin-bottom: 0.9rem;
+}
+
+.shop-hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.shop-hero-title em {
+  font-style: italic;
+  color: var(--pink-light);
+}
+
+.shop-hero-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+/* Stat badges — bottom bar */
+.shop-hero-badges {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  background: rgba(26, 0, 10, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(212, 82, 122, 0.3);
+}
+
+.hero-badge {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 2px;
+}
+.hero-badge:last-child {
+  border-right: none;
+}
+
+.badge-val {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pink-light);
+  line-height: 1;
+}
+.badge-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Scroll cue arrow */
+.shop-scroll-cue {
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  transition:
+    border-color 0.25s,
+    color 0.25s,
+    transform 0.25s;
+  animation: cue-pulse 2.5s ease-in-out infinite;
+}
+.shop-scroll-cue:hover {
+  border-color: var(--pink-light);
+  color: var(--pink-light);
+  transform: translateY(-50%) scale(1.08);
+}
+@keyframes cue-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 82, 122, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(212, 82, 122, 0.15);
+  }
+}
+
+/* ---- Listings section ---- */
+.shop-listings-section {
+  padding-bottom: 4rem;
+}
+.embed-wrap {
+  min-height: 400px;
+  width: 100%;
+}
+
+/* ---- Why Spore Play cards ---- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.why-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: 0 2px 20px rgba(212, 82, 122, 0.08);
+  border-top: 3px solid var(--pink);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(212, 82, 122, 0.16);
+}
+.why-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--pink-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--pink);
+  font-size: 1.1rem;
+}
+.why-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.why-card p {
+  font-size: 0.875rem;
+  color: var(--taupe-dark);
+  line-height: 1.7;
+}
+
+/* ---- Shop page responsive ---- */
+@media (max-width: 700px) {
+  .shop-hero {
+    height: 85vh;
+    max-height: none;
+  }
+  .shop-hero-content {
+    padding: 0 1.5rem;
+  }
+  .shop-hero-title {
+    font-size: 2.2rem;
+  }
+  .shop-hero-slice {
+    display: none;
+  }
+  .shop-scroll-cue {
+    display: none;
+  }
+  .badge-val {
+    font-size: 1.2rem;
+  }
+  .badge-label {
+    font-size: 0.65rem;
+  }
+}

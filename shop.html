@@ -113,103 +113,274 @@
     <!-- <div class="banner" id="shopbanner">
   <img src="SporePlay.jpg" alt="Banner Image">
 </div> -->
-    <!-- ======= HERO ======= -->
-    <section class="hero" id="Home">
-      <div class="hero-slides">
-        <div
-          class="slide active"
-          style="
-            background-image: url(&quot;PXL_20250513_132616823.PORTRAIT~2.jpg&quot;);
-          "
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url(&quot;mature_golden_oyster.jpg&quot;)"
-        ></div>
-        <div
-          class="slide"
-          style="
-            background-image: url(&quot;PXL_20241027_091454252.PORTRAIT (1) (1).jpg&quot;);
-          "
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url(&quot;young_golden_oyster.jpg&quot;)"
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url(&quot;poyster_gills.jpg&quot;)"
-        ></div>
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="hero-logo-wrap">
-          <!-- <img -->
-          <!-- src="SporePlay_banner_top (3).png" -->
-          <!-- alt="Spore Play"
-            class="hero-logo"
-          /> -->
-        </div>
-        <p class="hero-sub">
-          Gourmet grow kits and fresh mushrooms, handmade in north London
+
+    <!-- ======= SHOP HERO ======= -->
+    <header class="shop-hero" id="shop-top">
+      <div class="shop-hero-bg" id="shopHeroBg"></div>
+      <div class="shop-hero-overlay"></div>
+
+      <!-- Diagonal colour slice -->
+      <div class="shop-hero-slice" aria-hidden="true"></div>
+
+      <div class="shop-hero-content">
+        <span class="shop-hero-eyebrow reveal-up"
+          >Handmade in north London</span
+        >
+        <h1 class="shop-hero-title reveal-up" style="transition-delay: 0.1s">
+          The <em>Spore Play</em><br />Shop
+        </h1>
+        <p class="shop-hero-desc reveal-up" style="transition-delay: 0.2s">
+          Grow kits for every level — from your first flush<br />to your fifth
+          variety
         </p>
+        <!-- <a
+          href="#listings"
+          class="btn-primary reveal-up"
+          style="transition-delay: 0.3s"
+          >Browse Kits</a
+        > -->
+      </div>
+
+      <!-- Stat badges -->
+      <div class="shop-hero-badges">
+        <div class="hero-badge reveal-up" style="transition-delay: 0.35s">
+          <span class="badge-val">Grow Kits</span>
+          <span class="badge-label">for beginners and casual growers</span>
+        </div>
+        <div class="hero-badge reveal-up" style="transition-delay: 0.45s">
+          <span class="badge-val">Supplies</span>
+          <span class="badge-label">for mushroom fanatics</span>
+        </div>
+        <div class="hero-badge reveal-up" style="transition-delay: 0.55s">
+          <span class="badge-val">Jewellery and Art</span>
+          <span class="badge-label">for mushroom fanciers</span>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <a
+        href="#listings"
+        class="shop-scroll-cue"
+        aria-label="Scroll to listings"
+      >
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </header>
+
+    <!-- ======= INTRO STRIP ======= -->
+    <section class="intro-strip">
+      <!-- <div class="strip-item reveal-strip">
+        <i class="fa fa-leaf"></i>
+        <span>100% natural substrate</span>
+      </div> -->
+      <div class="strip-item reveal-strip" style="transition-delay: 0.1s">
+        <i class="fa fa-home"></i>
+        <span>Quick &amp; easy to grow</span>
+      </div>
+      <div class="strip-item reveal-strip" style="transition-delay: 0.2s">
+        <i class="fa fa-map-marker"></i>
+        <span>Handmade in Haringey, London</span>
+      </div>
+      <div class="strip-item reveal-strip" style="transition-delay: 0.3s">
+        <i class="fa fa-heart"></i>
+        <span>Small one-woman business</span>
       </div>
     </section>
 
+    <!-- ======= LISTINGS ======= -->
+    <section class="section section-light shop-listings-section" id="listings">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Browse the Collection</h2>
+          <p class="section-sub">Which species will you grow next?</p>
+        </div>
 
- <!-- ======= INTRO STRIP ======= -->
-  <section class="intro-strip">
-    <div class="strip-item reveal-strip">
-      <i class="fa fa-leaf"></i>
-      <span>100% natural substrate</span>
-    </div>
-    <div class="strip-item reveal-strip" style="transition-delay: 0.1s">
-      <i class="fa fa-home"></i>
-      <span>Quick and easy to grow</span>
-    </div>
-    <div class="strip-item reveal-strip" style="transition-delay: 0.2s">
-      <i class="fa fa-map-marker"></i>
-      <span>Handmade in Harringey, London</span>
-    </div>
-    <div class="strip-item reveal-strip" style="transition-delay: 0.3s">
-      <i class="fa fa-heart"></i>
-      <span>Small one-woman business</span>
-    </div>
-  </section>
-
-    <div
-      class="w3-container w3-content w3-center w3-padding-64"
-      style="max-width: 800px"
-    >
-      <h1 class="w3-center">Welcome to the shop</h1>
-      <p class="w3-center">
-        Browse the collection. Which species will you grow next?
-      </p>
-    </div>
-
-    <div
-      class="w3-content"
-      style="max-width: 2000px; margin-top: 26px w3-center; z-index: 4"
-    ><section class="section section-taupe" id="listings">
-      <div id="listings"></div>
-
-      <!-- End Page Content -->
+        <!-- Embed360 Etsy embed -->
+        <div class="embed-wrap reveal-up" style="transition-delay: 0.15s">
+          <script
+            data-token="PP4n7fIFM3f2F2YNdF6KYTgGmOY7hc0QJ1RjI4ZpHXrshJH3emENuk43XZC8mrwq"
+            src="https://embed360.io/widgets/js/embed360.js"
+          ></script>
+        </div>
       </div>
     </section>
-    <!-- Image of location/map -->
+
+    <!-- ======= REVIEWS ======= -->
+    <section class="section section-taupe shop-reviews" id="reviews">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>What People Say</h2>
+          <p class="section-sub">
+            From growers who've been there, done that, eaten that
+          </p>
+        </div>
+        <div class="reviews-grid">
+          <!-- REVIEW 1 — replace with your content -->
+          <div class="review-card reveal-up" style="transition-delay: 0s">
+            <div class="review-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+            <blockquote class="review-text">
+              "Your review text goes here. Replace this with a real customer
+              quote."
+            </blockquote>
+            <div class="review-author">
+              <span class="review-name">Customer Name</span>
+              <span class="review-source">Etsy</span>
+            </div>
+          </div>
+
+          <!-- REVIEW 2 — replace with your content -->
+          <div class="review-card reveal-up" style="transition-delay: 0.12s">
+            <div class="review-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+            <blockquote class="review-text">
+              "Your review text goes here. Replace this with a real customer
+              quote."
+            </blockquote>
+            <div class="review-author">
+              <span class="review-name">Customer Name</span>
+              <span class="review-source">Etsy</span>
+            </div>
+          </div>
+
+          <!-- REVIEW 3 — replace with your content -->
+          <div class="review-card reveal-up" style="transition-delay: 0.24s">
+            <div class="review-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+            <blockquote class="review-text">
+              "Your review text goes here. Replace this with a real customer
+              quote."
+            </blockquote>
+            <div class="review-author">
+              <span class="review-name">Customer Name</span>
+              <span class="review-source">Etsy</span>
+            </div>
+          </div>
+
+          <!-- TO ADD MORE REVIEWS: copy a review-card block above and paste it here.
+             Increase transition-delay by 0.12s for each new card (0.36s, 0.48s...).
+             Change review-source to "Instagram", "Google" etc. as needed. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= WHY SPORE PLAY ======= -->
+    <section class="section section-pink shop-why">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Why Spore Play?</h2>
+          <p class="section-sub">
+            Your kit is carefully nursed from spore to fully colonised and ready
+            to fruit. Only fit and thriving fungi will reach you.
+          </p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal-up" style="transition-delay: 0s">
+            <div class="why-icon"><i class="fa fa-flask"></i></div>
+            <h3>Home lab quality</h3>
+            <p>
+              Every bag is prepared, inoculated, and incubated by Rachel in a
+              sterile home lab — Care and quality control over each kit, no bulk
+              shortcuts.
+            </p>
+          </div>
+          <div class="why-card reveal-up" style="transition-delay: 0.12s">
+            <div class="why-icon"><i class="fa fa-leaf"></i></div>
+            <h3>Natural substrate</h3>
+            <p>
+              A blend of hardwood/straw, soy hulls, and gypsum — the same recipe
+              as the best commercial operations.
+            </p>
+          </div>
+          <div class="why-card reveal-up" style="transition-delay: 0.24s">
+            <div class="why-icon"><i class="fa fa-recycle"></i></div>
+            <h3>Low waste</h3>
+            <p>
+              The substrate makes excellent garden compost after your final
+              harvest.
+            </p>
+          </div>
+          <div class="why-card reveal-up" style="transition-delay: 0.36s">
+            <div class="why-icon"><i class="fa fa-clock-o"></i></div>
+            <h3>Ready to fruit</h3>
+            <p>
+              Your kit arrives fully colonised. Cut, mist, and watch pins appear
+              within days — no setup, no sterilisation, no specialist kit
+              required.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FOOTER BANNER + FOOTER ======= -->
     <img
       src="SporePlay_banner_bottom(2).jpg"
-      class="w3-image"
-      style="width: 100%"
-      style="height: 50px"
+      alt=""
+      class="footer-banner"
+      aria-hidden="true"
     />
-
-    <!-- Footer -->
-    <footer>
-      <script
-        data-token="PP4n7fIFM3f2F2YNdF6KYTgGmOY7hc0QJ1RjI4ZpHXrshJH3emENuk43XZC8mrwq"
-        src="https://embed360.io/widgets/js/embed360.js"
-      ></script>
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-brand">Spore Play Mushrooms</p>
+        <p class="footer-copy">
+          Handmade in north London &nbsp;·&nbsp;
+          <a href="mailto:info@sporeplay.co.uk">info@sporeplay.co.uk</a>
+        </p>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/sporeplaymushrooms/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      // ---- Navbar (always solid on shop page) ----
+      function toggleNav() {
+        document.getElementById("navLinks").classList.toggle("open");
+        document.querySelector(".nav-toggle").classList.toggle("active");
+      }
+      function closeNav() {
+        document.getElementById("navLinks").classList.remove("open");
+        document.querySelector(".nav-toggle").classList.remove("active");
+      }
+
+      // ---- Parallax hero background ----
+      const heroBg = document.getElementById("shopHeroBg");
+      function updateParallax() {
+        const scrollY = window.scrollY;
+        // Move background up at half scroll speed for parallax feel
+        heroBg.style.transform = "translateY(" + scrollY * 0.45 + "px)";
+      }
+      window.addEventListener("scroll", updateParallax, { passive: true });
+
+      // ---- Scroll reveal ----
+      const revealEls = document.querySelectorAll(
+        ".reveal-up, .reveal-left, .reveal-right, .reveal-strip",
+      );
+      function checkReveal() {
+        const winH = window.innerHeight;
+        revealEls.forEach((el) => {
+          if (el.getBoundingClientRect().top < winH * 0.9) {
+            el.classList.add("is-visible");
+          }
+        });
+      }
+      checkReveal();
+      window.addEventListener("scroll", checkReveal, { passive: true });
+    </script>
   </body>
 </html>
